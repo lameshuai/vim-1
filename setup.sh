@@ -6,9 +6,9 @@ rm -rf ~/.vim ~/.vimrc
 mkdir ~/.vim
 mkdir -p ~/.vim/bundle
 git clone https://github.com/gmarik/vundle.git ~/.vim/bundle/vundle
-mv -f vimrc ~/.vimrc
-mv -f ycm_extra_conf.py ~/.ycm_extra_conf.py
-mv libclang.so ~/.vim/bundle &
+mv -f ~/vim/vimrc ~/.vimrc
+mv -f ~/vim/ycm_extra_conf.py ~/.ycm_extra_conf.py
+mv -f ~/vim/libclang.so ~/.vim/bundle &
 echo "BundleInstall" > Temporary
 echo "The installation completes automatically exits" >> Temporary
 vim Temporary -c "BundleInstall" -c "q" -c "q"
