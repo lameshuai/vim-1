@@ -3,10 +3,10 @@ echo "Need to wait a while"
 sudo apt-get install -y vim exuberant-ctags python python-dev cmake build-essential subversion git smbclient tree
 #compile clang and llvm
 rm -rf ~/.vim
-mkdir ~/.vim
 git clone https://github.com/dudn/vim.git ~/.vim
 tar jxvf ~/.vim/llvm.tar.bz2 -C ~/.vim
-mkdir -p ~/.vim/build ; cd ~/.vim/build
+mkdir -p ~/.vim/build 
+cd ~/.vim/build
 cmake -G "Unix Makefiles" ../llvm
 make
 #install vundle
@@ -21,7 +21,7 @@ rm Temporary
 #compile youcompleteme
 mkdir -p ~/.vim/ycm_build
 cd ~/.vim/ycm_build
-cmake -G "Unix Makefiles" -DEXTERNAL_LIBCLANG_PATH=~/.vim/ . ~/.vim/bundle/YouCompleteMe/third_party/ycmd/cpp
+cmake -G "Unix Makefiles" -DEXTERNAL_LIBCLANG_PATH=~/.vim/build/lib/libclang.so . ~/.vim/bundle/YouCompleteMe/third_party/ycmd/cpp
 make ycm_core
 make ycm_support_libs
 mv -f ~/.vim/ycm_extra_conf.py ~/.ycm_extra_conf.py
