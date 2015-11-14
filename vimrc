@@ -32,7 +32,7 @@ inoremap < <><ESC>i
 inoremap > <c-r>=ClosePair('>')<CR>
 inoremap ( ()<ESC>i
 inoremap ) <c-r>=ClosePair(')')<CR>
-inoremap { {<CR>}<ESC>O
+inoremap { {}<ESC>O
 inoremap } <c-r>=ClosePair('}')<CR>
 inoremap [ []<ESC>i
 inoremap ] <c-r>=ClosePair(']')<CR>
