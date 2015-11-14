@@ -72,7 +72,7 @@ flags = [
 '-I',
 '.',
 '-I',
-'./ClangCompleter',
+'./.vim/bundle/YouCompleteMe/third_party/ycmd/cpp/ycm/ClangCompleter',
 #'-isystem',
 #'./tests/gmock/gtest',
 #'-isystem',
