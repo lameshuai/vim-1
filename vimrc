@@ -27,7 +27,8 @@ set shiftwidth=3
 set completeopt=longest,menu 
 set history=1000
 set background=dark
-set tags+=./tags
+inoremap < <><ESC>i
+inoremap > <c-r>=ClosePair('>')<CR>
 inoremap ( ()<ESC>i
 inoremap ) <c-r>=ClosePair(')')<CR>
 inoremap { {<CR>}<ESC>O
