@@ -25,3 +25,7 @@ cmake -G "Unix Makefiles" -DEXTERNAL_LIBCLANG_PATH=~/.vim/build/lib/libclang.so 
 make ycm_core
 make ycm_support_libs
 mv -f ~/.vim/ycm_extra_conf.py ~/.ycm_extra_conf.py
+#clean
+rm -f ~/.vim/llvm.tar.bz2
+rm -f ~/.vim/README.md
+rm -f ~./vim/setup.sh
