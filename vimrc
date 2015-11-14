@@ -10,6 +10,7 @@ Bundle 'gmarik/vundle'
 Bundle 'taglist.vim'
 Bundle 'Valloric/YouCompleteMe'
 set nu
+set ic
 syntax on
 syntax enable
 set tabstop=3
