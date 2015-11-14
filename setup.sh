@@ -28,4 +28,3 @@ mv -f ~/.vim/ycm_extra_conf.py ~/.ycm_extra_conf.py
 #clean
 rm -f ~/.vim/llvm.tar.bz2
 rm -f ~/.vim/README.md
-rm -f ~./vim/setup.sh
