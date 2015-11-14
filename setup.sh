@@ -14,10 +14,10 @@ mkdir -p ~/.vim/bundle
 git clone https://github.com/gmarik/vundle.git ~/.vim/bundle/vundle
 #BundleInstall
 mv -f ~/.vim/vimrc ~/.vimrc
-echo "BundleInstall" > Temporary
-echo "The installation completes automatically exits" >> Temporary
-vim Temporary -c "BundleInstall" -c "q" -c "q"
-rm Temporary
+echo "BundleInstall" > ~/Temporary
+echo "The installation completes automatically exits" >> ~/Temporary
+vim ~/Temporary -c "BundleInstall" -c "q" -c "q"
+rm ~/Temporary
 #compile youcompleteme
 mkdir -p ~/.vim/ycm_build
 cd ~/.vim/ycm_build
