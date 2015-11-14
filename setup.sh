@@ -3,7 +3,7 @@ echo "Need to wait a while"
 sudo apt-get install -y vim exuberant-ctags python python-dev cmake build-essential subversion git smbclient tree
 #compile clang and llvm
 rm -rf ~/.vim
-git clone https://github.com/dudn/vim.git ~/.vim
+mv ~/vim ~/.vim
 tar jxvf ~/.vim/llvm.tar.bz2 -C ~/.vim
 mkdir -p ~/.vim/build 
 cd ~/.vim/build
