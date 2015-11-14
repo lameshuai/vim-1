@@ -1,5 +1,6 @@
 "use vundle to manage plugin, required turn file type off an nocopatible                       
 "clang.llvm.org
+"gnome-terminal --maximize
 filetype off
 set nocompatible
 filetype plugin on
@@ -26,17 +27,25 @@ set shiftwidth=3
 set completeopt=longest,menu 
 set history=1000
 set background=dark
-"inoremap ( ()<ESC>i
-"inoremap [ []<ESC>i
-"inoremap { {}<ESC>i
-"inoremap < <><ESC>i
-"colorscheme 
-"taglist:
-nnoremap <silent> <F8> :TlistToggle<CR>
+set tags+=./tags
+inoremap ( ()<ESC>i
+inoremap ) <c-r>=ClosePair(')')<CR>
+inoremap { {<CR>}<ESC>O
+inoremap } <c-r>=ClosePair('}')<CR>
+inoremap [ []<ESC>i
+inoremap ] <c-r>=ClosePair(']')<CR>
+inoremap " ""<ESC>i
+inoremap ' ''<ESC>i
+function! ClosePair(char)
+    if getline('.')[col('.') - 1] == a:char
+        return "\<Right>"
+    else
+        return a:char
+    endif
+endfunction
 let Tlist_Auto_Open = 1
 let Tlist_Auto_Update = 1
 let Tlist_Exit_OnlyWindow = 1
-
 let g:ycm_filetype_blacklist = {
 			\ 'tagbar' : 1,
 			\ 'qf' : 1,
@@ -60,6 +69,5 @@ let g:ycm_min_num_of_chars_for_completion=2
 let g:ycm_collect_identifiers_from_tags_files = 1
 let g:ycm_collect_identifiers_from_comments_and_strings = 1
 nnoremap <F5> :YcmForceCompileAndDiagnostics<CR>
+nnoremap <silent> <F8> :TlistToggle<CR>
 nnoremap <F12> :!ctags -R<CR>
-"max terminal command
-"gnome-terminal --maximize
