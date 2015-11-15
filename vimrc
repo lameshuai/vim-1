@@ -45,7 +45,10 @@ function! ClosePair(char)
     endif
 endfunction
 let Tlist_Auto_Update = 1
-let Tlist_Exit_OnlyWindow = 1
+let Tlist_Compact_Format = 1 
+let Tlist_Exit_OnlyWindow = 1 
+let Tlist_Enable_Fold_Column = 0 
+let Tlist_Use_Right_Window = 1 
 let g:ycm_filetype_blacklist = {
 			\ 'tagbar' : 1,
 			\ 'qf' : 1,
