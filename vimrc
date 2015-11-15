@@ -49,6 +49,7 @@ let Tlist_Compact_Format = 1
 let Tlist_Exit_OnlyWindow = 1 
 let Tlist_Enable_Fold_Column = 0 
 let Tlist_Use_Right_Window = 1 
+autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTreeType") && b:NERDTreeType == "primary") | q | endif
 let g:ycm_filetype_blacklist = {
 			\ 'tagbar' : 1,
 			\ 'qf' : 1,
@@ -76,6 +77,7 @@ highlight YcmErrorSection guibg= 0
 highlight YcmWarningSection guibg= 0
 nnoremap gl :YcmCompleter GoToDeclaration<CR>
 nnoremap gf :YcmCompleter GoToDefinition<CR>
+nnoremap <silent> <F4> :NERDTreeToggle<CR>
 nnoremap <F5> :YcmForceCompileAndDiagnostics<CR>
 nnoremap <silent> <F8> :TlistToggle<CR>
 nnoremap <F9> :YcmCompleter FixIt<CR>
