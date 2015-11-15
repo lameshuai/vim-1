@@ -29,6 +29,7 @@ set shiftwidth=3
 set completeopt=longest,menu 
 set history=1000
 set background=dark
+set backspace=indent,eol,start
 inoremap < <><ESC>i
 inoremap > <c-r>=ClosePair('>')<CR>
 inoremap ( ()<ESC>i
@@ -61,8 +62,8 @@ let g:ycm_filetype_blacklist = {
 			\}
 nnoremap gl :YcmCompleter GoToDeclaration<CR>
 nnoremap gf :YcmCompleter GoToDefinition<CR>
-let g:ycm_error_symbol = 'x'
-let g:ycm_warning_symbol = '!'
+let g:ycm_enable_diagnostic_signs = 0
+let g:ycm_show_diagnostics_ui = 1
 let g:ycm_global_ycm_extra_conf = '~/.ycm_extra_conf.py'
 let g:ycm_cache_omnifunc = 0
 let g:ycm_seed_identifiers_with_syntax = 1
