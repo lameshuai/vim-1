@@ -30,8 +30,6 @@ set shiftwidth=3
 set completeopt=longest,menu 
 set history=1000
 set backspace=indent,eol,start
-inoremap < <><ESC>i
-inoremap > <c-r>=ClosePair('>')<CR>
 inoremap ( ()<ESC>i
 inoremap ) <c-r>=ClosePair(')')<CR>
 inoremap { {}<ESC>i
