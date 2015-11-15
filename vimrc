@@ -44,7 +44,6 @@ function! ClosePair(char)
         return a:char
     endif
 endfunction
-let Tlist_Auto_Open = 1
 let Tlist_Auto_Update = 1
 let Tlist_Exit_OnlyWindow = 1
 let g:ycm_filetype_blacklist = {
