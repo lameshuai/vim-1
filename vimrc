@@ -8,6 +8,7 @@ set rtp+=~/.vim/bundle/vundle
 call vundle#rc()
 Bundle 'gmarik/vundle'
 Bundle 'taglist.vim'
+Bundle 'The-NERD-tree'
 Bundle 'Valloric/YouCompleteMe'
 set nu
 set ic
