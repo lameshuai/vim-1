@@ -11,6 +11,7 @@ Bundle 'taglist.vim'
 Bundle 'Valloric/YouCompleteMe'
 set nu
 set ic
+set fileencoding=UTF-8 
 syntax on
 syntax enable
 set tabstop=3
