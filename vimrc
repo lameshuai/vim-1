@@ -30,19 +30,6 @@ set shiftwidth=3
 set completeopt=longest,menu 
 set history=1000
 set backspace=indent,eol,start
-inoremap ( ()<ESC>i
-inoremap ) <c-r>=ClosePair(')')<CR>
-inoremap { {}<ESC>i
-inoremap } <c-r>=ClosePair('}')<CR>
-inoremap [ []<ESC>i
-inoremap ] <c-r>=ClosePair(']')<CR>
-function! ClosePair(char)
-    if getline('.')[col('.') - 1] == a:char
-        return "\<Right>"
-    else
-        return a:char
-    endif
-endfunction
 let Tlist_Auto_Update = 1
 let Tlist_Compact_Format = 1 
 let Tlist_Exit_OnlyWindow = 1 
