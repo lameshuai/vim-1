@@ -6,15 +6,15 @@ rm -rf ~/.vim
 mv vim ~/.vim
 mkdir -p ~/.vim/bundle
 git clone https://github.com/gmarik/vundle.git ~/.vim/bundle/vundle
+#BundleInstall
+mv -f ~/.vim/vimrc ~/.vimrc
+vim  -c "BundleInstall" -c "q" -c "q"
 #compile clang and llvm
 tar jxvf ~/.vim/llvm.tar.bz2 -C ~/.vim
 mkdir -p ~/.vim/build 
 cd ~/.vim/build
 cmake -G "Unix Makefiles" ../llvm
 make
-#BundleInstall
-mv -f ~/.vim/vimrc ~/.vimrc
-vim  -c "BundleInstall" -c "q" -c "q"
 #compile youcompleteme
 mkdir -p ~/.vim/ycm_build
 cd ~/.vim/ycm_build
