@@ -1,6 +1,6 @@
 #!/bin/sh
 echo "Need to wait a while"
-sudo apt-get install -y vim exuberant-ctags python python-dev cmake build-essential subversion git tree gcc g++ flashplugin-installer
+sudo apt-get install -y vim exuberant-ctags python python-dev cmake build-essential subversion git tree gcc g++ valgrind flashplugin-installer
 #install vundle
 rm -rf ~/.vim
 mv vim ~/.vim
