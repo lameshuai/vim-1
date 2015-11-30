@@ -64,7 +64,20 @@ highlight YcmWarningSection guibg= 0
 nnoremap gl :YcmCompleter GoToDeclaration<CR>
 nnoremap gf :YcmCompleter GoToDefinition<CR>
 nnoremap <silent> <F4> :NERDTreeToggle<CR>
-nnoremap <F5> :YcmForceCompileAndDiagnostics<CR>
+nnoremap <F6> :YcmForceCompileAndDiagnostics<CR>
 nnoremap <silent> <F8> :TlistToggle<CR>
 nnoremap <F9> :YcmCompleter FixIt<CR>
 nnoremap <F12> :!ctags -R<CR>
+nnoremap <F5> :call CompileRunGcc()<CR>
+func! CompileRunGcc()
+   exec "w" 
+   if &filetype == 'c' 
+      exec "!gcc % -Wall -o %<"
+      sleep(1)
+      exec "! ./%<"
+   elseif &filetype == 'cpp'
+      exec "!g++ -Wall % -o %<"
+      sleep(1)
+      exec "! ./%<"
+   endif
+endfunc
